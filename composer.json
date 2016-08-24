@@ -1,0 +1,14 @@
+{
+    "name": "stratedge/mayday",
+    "description": "Helper library for returning consistent API errors",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jarret Byrne",
+            "email": "jarret@solvomedia.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
