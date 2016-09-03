@@ -2,6 +2,7 @@
 
 namespace Stratedge\Mayday\Handlers;
 
+use Exception;
 use Stratedge\Mayday\Exceptions\ApiException;
 use Stratedge\Mayday\Handlers\HandlerInterface;
 
