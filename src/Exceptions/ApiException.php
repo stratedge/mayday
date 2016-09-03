@@ -13,22 +13,22 @@ class ApiException extends Exception
 
     protected $headers = [];
 
-    public function __construct($http_status_code = null, $code = null, $type = null, $message = null)
+    public function __construct($http_status_code = null, $code = null, $message = null, $type = null)
     {
-        if (!is_null($code)) {
-            $this->setCode($code);
+        if (!is_null($http_status_code)) {
+            $this->setHttpStatusCode($http_status_code);
         }
 
-        if (!is_null($type)) {
-            $this->setType($type);
+        if (!is_null($code)) {
+            $this->setCode($code);
         }
 
         if (!is_null($message)) {
             $this->setMessage($message);
         }
 
-        if (!is_null($http_status_code)) {
-            $this->setHttpStatusCode($http_status_code);
+        if (!is_null($type)) {
+            $this->setType($type);
         }
     }
 
