@@ -7,12 +7,12 @@ use Stratedge\Mayday\Exceptions\ApiException;
 class OAuthException extends ApiException
 {
     protected $code = 1000;
-    protected $type = 'OAuth';
-    protected $message = 'An unexpected authentication error has occurred.';
+    protected $type = "OAuth";
+    protected $message = "An unexpected authentication error has occurred.";
     protected $http_status_code = 401;
 
-    protected $error = 'oauth';
-    protected $error_description = 'An unexpected authentication error has occurred';
+    protected $error = "oauth";
+    protected $error_description = "An unexpected authentication error has occurred";
 
 
     public function setMessage($message)
@@ -25,7 +25,6 @@ class OAuthException extends ApiException
     public function getError()
     {
         return $this->error;
-
     }
 
 
@@ -39,7 +38,6 @@ class OAuthException extends ApiException
     public function getErrorDescription()
     {
         return $this->error_description;
-
     }
 
 
@@ -53,8 +51,8 @@ class OAuthException extends ApiException
     public function render()
     {
         return array_merge(parent::render(), [
-            'error' => $this->error,
-            'error_description' => $this->error_description
+            "error" => $this->error,
+            "error_description" => $this->error_description
         ]);
     }
 }
